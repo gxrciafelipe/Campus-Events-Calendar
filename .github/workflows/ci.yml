@@ -62,7 +62,7 @@ jobs:
         run: supabase db start
 
       - name: Lint database functions
-        run: supabase db lint --fail-on error
+        run: supabase db lint --schema public --fail-on error
 
       - name: Permission tests (pgTAP)
         run: supabase test db
