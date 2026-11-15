@@ -1,0 +1,9 @@
+dist
+coverage
+node_modules
+package-lock.json
+src/lib/database.types.ts
+CLAUDE.md
+PLAN.md
+TASKS.md
+DESIGN.md
