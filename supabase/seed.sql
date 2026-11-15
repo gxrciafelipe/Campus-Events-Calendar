@@ -1,0 +1,2 @@
+-- Local development data only. Invented people and organizations only: this repository is public.
+-- Intentionally empty until a later task adds seed data.
