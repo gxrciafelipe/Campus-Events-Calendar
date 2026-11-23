@@ -1,9 +1,14 @@
-import { APP_NAME } from '../lib/config';
+import { useState } from 'react';
+import { RouterProvider } from 'react-router';
+import { ToastProvider } from '../components/ui';
+import { createAppRouter } from './router';
 
 export function App() {
+  const [router] = useState(createAppRouter);
+
   return (
-    <main>
-      <h1>{APP_NAME}</h1>
-    </main>
+    <ToastProvider>
+      <RouterProvider router={router} />
+    </ToastProvider>
   );
 }
