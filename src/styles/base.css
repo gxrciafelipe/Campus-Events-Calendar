@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter/wght.css';
+@import './tokens.css';
+
+/*
+ * Only token-backed utilities exist. Each namespace is cleared first so Tailwind's
+ * defaults (palette, numeric spacing, radii, shadows, type sizes, weights) are unavailable.
+ */
+@theme inline {
+  --color-*: initial;
+  --color-bg: var(--bg);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-edge: var(--accent-edge);
+  --color-danger: var(--danger);
+  --color-label-teal: var(--label-teal);
+  --color-label-green: var(--label-green);
+  --color-label-purple: var(--label-purple);
+  --color-label-magenta: var(--label-magenta);
+  --color-label-orange: var(--label-orange);
+  --color-label-olive: var(--label-olive);
+  --color-label-brown: var(--label-brown);
+  --color-label-slate: var(--label-slate);
+
+  --spacing-*: initial;
+  --spacing-0: 0px;
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-6: var(--space-6);
+  --spacing-8: var(--space-8);
+  --spacing-12: var(--space-12);
+
+  --radius-*: initial;
+  --radius-control: var(--corner-control);
+  --radius-container: var(--corner-container);
+  --radius-dialog: var(--corner-dialog);
+  --radius-full: var(--corner-full);
+
+  --shadow-*: initial;
+  --shadow-dialog: var(--elevation-dialog);
+
+  --text-*: initial;
+  --text-caption: var(--size-caption);
+  --text-caption--line-height: var(--leading-caption);
+  --text-secondary: var(--size-secondary);
+  --text-secondary--line-height: var(--leading-secondary);
+  --text-body: var(--size-body);
+  --text-body--line-height: var(--leading-body);
+  --text-section: var(--size-section);
+  --text-section--line-height: var(--leading-section);
+  --text-title: var(--size-title);
+  --text-title--line-height: var(--leading-title);
+  --text-month: var(--size-month);
+  --text-month--line-height: var(--leading-month);
+
+  --font-*: initial;
+  --font-sans: var(--family-sans);
+  --font-mono: var(--family-mono);
+
+  --font-weight-*: initial;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --breakpoint-*: initial;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--family-sans);
+    font-size: var(--size-body);
+    line-height: var(--leading-body);
+    font-weight: 400;
+    font-style: normal;
+    padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  /* Times, dates and counts always use tabular numerals; `tabular-nums` covers the rest. */
+  time {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* 16px minimum keeps iOS from zooming on focus. */
+  input,
+  select,
+  textarea {
+    font-size: var(--size-body);
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--family-mono);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/* Design tokens. Values mirror DESIGN.md exactly; change both together. */
+
+:root {
+  color-scheme: light dark;
+
+  /* Palette */
+  --bg: #ffffff;
+  --bg-subtle: #f3f5f8;
+  --text: #141a22;
+  --text-muted: #566072;
+  --line: #d5dae3;
+  --line-strong: #7c8696;
+  --primary: #0e4c90;
+  --on-primary: #ffffff;
+  --accent: #ffd200;
+  --on-accent: #141a22;
+  --accent-edge: #947900;
+  --danger: #b3261e;
+
+  /* Organization label colors */
+  --label-teal: #0b6b6b;
+  --label-green: #2c6a1e;
+  --label-purple: #6b3fa0;
+  --label-magenta: #a3246f;
+  --label-orange: #964800;
+  --label-olive: #5a5f00;
+  --label-brown: #7a4a21;
+  --label-slate: #4a5568;
+
+  /* Spacing scale: nothing in between */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* Radius */
+  --corner-control: 6px;
+  --corner-container: 12px;
+  --corner-dialog: 16px;
+  --corner-full: 9999px;
+
+  /* Type scale: size / line-height */
+  --size-caption: 12px;
+  --leading-caption: 16px;
+  --size-secondary: 14px;
+  --leading-secondary: 20px;
+  --size-body: 16px;
+  --leading-body: 24px;
+  --size-section: 20px;
+  --leading-section: 28px;
+  --size-title: 24px;
+  --leading-title: 32px;
+  --size-month: 30px;
+  --leading-month: 36px;
+
+  /* The one shadow in the app, on the dialog */
+  --elevation-dialog: 0 8px 32px rgb(20 26 34 / 0.16);
+
+  /* Type families */
+  --family-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --family-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1218;
+    --bg-subtle: #171c24;
+    --text: #e9edf3;
+    --text-muted: #9ba5b6;
+    --line: #2c3440;
+    --line-strong: #6f7a8c;
+    --primary: #8db9f4;
+    --on-primary: #0e1218;
+    --accent: #ffd200;
+    --on-accent: #141a22;
+    --accent-edge: #ffd200;
+    --danger: #ff9c94;
+
+    --label-teal: #5fd0c8;
+    --label-green: #8fd47a;
+    --label-purple: #c3a6f2;
+    --label-magenta: #f29ac8;
+    --label-orange: #ffb067;
+    --label-olive: #c9cf6a;
+    --label-brown: #e0b48c;
+    --label-slate: #b4becd;
+
+    --elevation-dialog: 0 8px 32px rgb(0 0 0 / 0.5);
+  }
+}
